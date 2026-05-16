@@ -10,10 +10,10 @@ export default function Facilities() {
     ["LIVE", "WECHAT SUPPORT", "Constant communication support and real-time translation throughout."],
   ];
   return (
-    <section style={{ padding: "100px 44px", background: "var(--bg)" }}>
+    <section style={{ padding: "80px 20px", background: "var(--bg)" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div
-          style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 56, flexWrap: "wrap", gap: 24 }}
+          style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 56, flexWrap: "wrap", gap: 32 }}
         >
           <div>
             <div
@@ -31,7 +31,7 @@ export default function Facilities() {
             <h2
               style={{
                 fontFamily: '"Bebas Neue", sans-serif',
-                fontSize: 64,
+                fontSize: "clamp(48px, 8vw, 64px)",
                 color: "var(--navy)",
                 lineHeight: 0.95,
               }}
@@ -47,7 +47,7 @@ export default function Facilities() {
               fontStyle: "italic",
               fontSize: 17,
               color: "var(--muted)",
-              maxWidth: 300,
+              maxWidth: 400,
               lineHeight: 1.65,
             }}
           >
@@ -55,7 +55,7 @@ export default function Facilities() {
             demanding frontiers.
           </div>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 2 }}>
+        <div className="stats-grid" style={{ gap: 2 }}>
           {items.map(([badge, title, desc], i) => (
             <div
               key={i}
@@ -99,5 +99,6 @@ export default function Facilities() {
         </div>
       </div>
     </section>
+
   );
 }

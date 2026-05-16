@@ -3,25 +3,26 @@ import Link from "next/link";
 export default function CTABanner() {
   return (
     <section
-      style={{ padding: "72px 44px", background: "var(--amber)", position: "relative", overflow: "hidden" }}
+      style={{ padding: "80px 20px", background: "var(--amber)", position: "relative", overflow: "hidden" }}
     >
       <div
         style={{
           position: "absolute",
           inset: 0,
-          opacity: 0.08,
+          opacity: 0.1,
           backgroundImage:
             "linear-gradient(rgba(255, 255, 255, 1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 1) 1px, transparent 1px)",
-          backgroundSize: "28px 28px",
+          backgroundSize: "32px 32px",
         }}
       />
       <div style={{ maxWidth: 1200, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
         <h2
           style={{
             fontFamily: '"Bebas Neue", sans-serif',
-            fontSize: "clamp(36px, 5vw, 64px)",
+            fontSize: "clamp(32px, 8vw, 64px)",
             color: "var(--navy)",
-            marginBottom: 12,
+            marginBottom: 16,
+            lineHeight: 1,
           }}
         >
           RESERVE YOUR SEAT ON THE SILK ROAD
@@ -29,9 +30,11 @@ export default function CTABanner() {
         <div
           style={{
             fontFamily: '"Rajdhani", sans-serif',
-            fontSize: 16,
-            color: "var(--muted)",
-            marginBottom: 32,
+            fontSize: "clamp(14px, 4vw, 18px)",
+            color: "rgba(13, 27, 46, 0.75)",
+            marginBottom: 40,
+            maxWidth: 600,
+            margin: "0 auto 40px",
           }}
         >
           Limited availability for our next expedition. Submit your itinerary request to begin your journey.
@@ -42,14 +45,15 @@ export default function CTABanner() {
             className="clip-path-btn"
             style={{
               display: "inline-block",
-              background: "#fff",
-              color: "var(--amber)",
+              background: "var(--navy)",
+              color: "#fff",
               fontFamily: '"Rajdhani", sans-serif',
               fontWeight: 700,
               fontSize: 13,
               letterSpacing: "0.16em",
-              padding: "13px 36px",
+              padding: "13px 40px",
               textDecoration: "none",
+              minWidth: 200,
             }}
           >
             BOOK EXPEDITION
@@ -59,14 +63,16 @@ export default function CTABanner() {
             style={{
               display: "inline-flex",
               alignItems: "center",
+              justifyContent: "center",
               background: "transparent",
-              color: "#fff",
-              border: "2px solid rgba(255, 255, 255, 0.55)",
+              color: "var(--navy)",
+              border: "2px solid var(--navy)",
               fontFamily: '"Rajdhani", sans-serif',
               fontWeight: 700,
               fontSize: 13,
               letterSpacing: "0.1em",
-              padding: "11px 36px",
+              padding: "11px 40px",
+              minWidth: 200,
             }}
           >
             CALL +92 333 777 9933
@@ -74,5 +80,6 @@ export default function CTABanner() {
         </div>
       </div>
     </section>
+
   );
 }

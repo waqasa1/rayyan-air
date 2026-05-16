@@ -23,7 +23,7 @@ export default function GalleryPage() {
   const filtered = filter === "ALL" ? destinations : destinations.filter((d) => d.cat === filter);
 
   return (
-    <div style={{ maxWidth: 1200, margin: "0 auto", paddingTop: 100, paddingBottom: 100, paddingLeft: 40, paddingRight: 40 }}>
+    <div style={{ maxWidth: 1200, margin: "0 auto", padding: "120px 20px 80px" }}>
       <div style={{ marginBottom: 48 }}>
         <div
           style={{
@@ -37,8 +37,8 @@ export default function GalleryPage() {
         >
           ◆ DESTINATION ARCHIVE
         </div>
-        <h1 style={{ fontFamily: '"Bebas Neue", sans-serif', fontSize: 68, color: "var(--navy)", marginBottom: 24 }}>GALLERY</h1>
-        <div style={{ display: "flex", gap: 8 }}>
+        <h1 style={{ fontFamily: '"Bebas Neue", sans-serif', fontSize: "clamp(48px, 10vw, 68px)", color: "var(--navy)", marginBottom: 24 }}>GALLERY</h1>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
           {["ALL", "PAKISTAN", "CHINA", "HERITAGE"].map((f) => (
             <button
               key={f}
@@ -60,7 +60,8 @@ export default function GalleryPage() {
           ))}
         </div>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 5 }}>
+      <div className="gallery-grid">
+
         {filtered.map((dest, i) => (
           <div
             key={i}

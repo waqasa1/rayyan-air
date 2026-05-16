@@ -17,11 +17,12 @@ export default function Footer() {
       style={{
         background: "#F3F4F6",
         borderTop: "1px solid var(--amber-border)",
-        padding: "60px 44px 30px",
+        padding: "60px 20px 30px",
       }}
     >
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: 60, marginBottom: 48 }}>
+        <div className="footer-grid" style={{ marginBottom: 48 }}>
+
           <div>
             <Logo />
             <div

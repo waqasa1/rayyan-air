@@ -90,13 +90,13 @@ export default function PackagesPage() {
       <div
         style={{
           background: `radial-gradient(ellipse at 60% 50%, rgba(20, 50, 120, 0.05) 0%, transparent 60%), linear-gradient(180deg, var(--bg) 0%, #F3F4F6 100%)`,
-          padding: "90px 44px 60px",
+          padding: "120px 20px 80px",
           position: "relative",
           overflow: "hidden",
         }}
       >
         <GridBg />
-        <Crosshair top={40} right={80} opacity={0.1} />
+        <Crosshair top={40} right={80} opacity={0.1} className="hide-mobile" />
         <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
           <div
             style={{
@@ -113,10 +113,10 @@ export default function PackagesPage() {
           <h1
             style={{
               fontFamily: '"Bebas Neue", sans-serif',
-              fontSize: "clamp(50px, 8vw, 96px)",
+              fontSize: "clamp(44px, 10vw, 96px)",
               color: "var(--navy)",
               lineHeight: 0.88,
-              marginBottom: 22,
+              marginBottom: 28,
             }}
           >
             NORTHERN PAKISTAN
@@ -124,7 +124,7 @@ export default function PackagesPage() {
             <span style={{ color: "var(--amber)" }}>&</span> XINJIANG SPLENDORS
           </h1>
           <div
-            style={{ display: "flex", gap: 28, flexWrap: "wrap", fontFamily: '"Rajdhani", sans-serif', fontSize: 13, color: "var(--muted)", fontWeight: 700 }}
+            style={{ display: "flex", gap: "20px 28px", flexWrap: "wrap", fontFamily: '"Rajdhani", sans-serif', fontSize: 13, color: "var(--muted)", fontWeight: 700 }}
           >
             {["8 DAYS · 7 NIGHTS", "2 COUNTRIES", "5-STAR THROUGHOUT", "$70,000 HEALTH COVERAGE", "VIP BORDER CROSSINGS"].map(
               (t, i) => (
@@ -139,7 +139,8 @@ export default function PackagesPage() {
       </div>
 
       {/* Content grid */}
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 40px 100px", display: "grid", gridTemplateColumns: "1fr 390px", gap: 60, alignItems: "start" }}>
+      <div className="packages-grid" style={{ maxWidth: 1200, margin: "0 auto", padding: "60px 20px 100px" }}>
+
         {/* Itinerary */}
         <div>
           <div

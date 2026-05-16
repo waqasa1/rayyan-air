@@ -3,14 +3,16 @@ export default function Crosshair({
   top,
   right,
   opacity = 0.12,
+  className = "",
 }: {
   size?: number;
   top?: number | string;
   right?: number | string;
   opacity?: number;
+  className?: string;
 }) {
   return (
-    <div style={{ position: "absolute", top, right, opacity, pointerEvents: "none" }}>
+    <div className={className} style={{ position: "absolute", top, right, opacity, pointerEvents: "none" }}>
       <svg width={size} height={size} viewBox="0 0 110 110">
         <circle cx="55" cy="55" r="48" stroke="var(--amber)" strokeWidth="0.8" fill="none" />
         <circle cx="55" cy="55" r="28" stroke="var(--amber)" strokeWidth="0.8" fill="none" />

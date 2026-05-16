@@ -9,7 +9,7 @@ export default function TourTeaser() {
     { n: "05–07", title: "Urumqi & Beyond", sub: "Heavenly Lake · Grand Bazaar · Xinjiang Museum" },
   ];
   return (
-    <section style={{ padding: "100px 44px", background: "var(--bg-card)", position: "relative" }}>
+    <section style={{ padding: "80px 20px", background: "var(--bg)", position: "relative" }}>
       <GridBg opacity={0.025} size={50} />
       <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>
         <div style={{ textAlign: "center", marginBottom: 56 }}>
@@ -41,12 +41,14 @@ export default function TourTeaser() {
               fontSize: 18,
               color: "var(--muted)",
               marginTop: 8,
+              maxWidth: 600,
+              margin: "8px auto 0",
             }}
           >
             An expertly curated luxury expedition across borders, through high mountain passes and ancient trading cities.
           </div>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20, marginBottom: 20 }}>
+        <div className="responsive-grid" style={{ marginBottom: 20 }}>
           {days.map((d, i) => (
             <Link
               key={i}
@@ -78,7 +80,7 @@ export default function TourTeaser() {
                 style={{
                   fontFamily: '"Bebas Neue", sans-serif',
                   fontSize: 52,
-                  color: "rgba(232, 130, 26, 0.1)",
+                  color: "rgba(232, 130, 26, 0.08)",
                   lineHeight: 1,
                 }}
               >
@@ -88,7 +90,7 @@ export default function TourTeaser() {
                 style={{
                   fontFamily: '"Rajdhani", sans-serif',
                   fontSize: 17,
-                  color: "var(--cream)",
+                  color: "var(--navy)",
                   fontWeight: 600,
                   marginBottom: 5,
                 }}
@@ -110,13 +112,11 @@ export default function TourTeaser() {
         </div>
         {/* Urumqi feature block */}
         <div
+          className="feature-grid"
           style={{
-            background: "linear-gradient(135deg, #0A1628 0%, #081220 100%)",
-            border: "1px solid rgba(232, 130, 26, 0.4)",
+            background: "linear-gradient(135deg, #0A1B2E 0%, #162C42 100%)",
+            border: "1px solid var(--amber-border)",
             padding: "36px 40px",
-            display: "grid",
-            gridTemplateColumns: "1fr auto",
-            gap: 40,
             alignItems: "center",
           }}
         >
@@ -155,7 +155,7 @@ export default function TourTeaser() {
               and Xinjiang Museum. Dine at EDEN Café and The Silk Road Restaurant before your private return flight.
             </div>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 12 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 12, width: "100%" }}>
             {[
               ["✈", "AIR TRANSFER"],
               ["🏨", "FIVE STAR"],
@@ -188,6 +188,7 @@ export default function TourTeaser() {
             ))}
           </div>
         </div>
+
         <div style={{ textAlign: "center", marginTop: 36 }}>
           <Link
             href="/packages"

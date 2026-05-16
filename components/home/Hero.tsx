@@ -7,11 +7,6 @@ import GridBg from "../GridBg";
 import Crosshair from "../Crosshair";
 
 export default function Hero() {
-  const [vis, setVis] = useState(false);
-  useEffect(() => {
-    setTimeout(() => setVis(true), 120);
-  }, []);
-
   return (
     <div
       style={{
@@ -45,9 +40,10 @@ export default function Hero() {
       </div>
 
       <GridBg opacity={0.12} />
-      <Crosshair top={80} right={60} />
+      <Crosshair top={80} right={60} className="hide-mobile" />
       {/* Diagonal accent line */}
       <div
+        className="hide-mobile"
         style={{
           position: "absolute",
           top: 0,
@@ -60,6 +56,7 @@ export default function Hero() {
       />
       {/* Coords readout */}
       <div
+        className="hide-mobile"
         style={{
           position: "absolute",
           bottom: 36,
@@ -78,6 +75,7 @@ export default function Hero() {
       </div>
       {/* Mission badge bottom left */}
       <div
+        className="hide-mobile"
         style={{
           position: "absolute",
           bottom: 36,
@@ -92,16 +90,14 @@ export default function Hero() {
       </div>
 
       <div
+        className="hero-content"
         style={{
           maxWidth: 1200,
           margin: "0 auto",
-          padding: "80px 44px",
+          padding: "60px 24px",
           position: "relative",
           zIndex: 2,
           width: "100%",
-          opacity: vis ? 1 : 0,
-          transform: vis ? "translateY(0)" : "translateY(28px)",
-          transition: "opacity 0.9s ease, transform 0.9s ease",
         }}
       >
         {/* Status badge */}
@@ -112,7 +108,7 @@ export default function Hero() {
             gap: 9,
             border: "1px solid var(--amber-border)",
             padding: "5px 16px",
-            marginBottom: 28,
+            marginBottom: 24,
             background: "rgba(255,255,255,0.6)",
           }}
         >
@@ -128,24 +124,24 @@ export default function Hero() {
           <span
             style={{
               fontFamily: '"Rajdhani", sans-serif',
-              fontSize: 11,
+              fontSize: 10,
               color: "var(--amber)",
-              letterSpacing: "0.2em",
+              letterSpacing: "0.15em",
               fontWeight: 700,
             }}
           >
-            MISSION STATUS: ACTIVE · SILK ROAD EXPEDITION 2025
+            MISSION STATUS: ACTIVE
           </span>
         </div>
 
         <h1
           style={{
             fontFamily: '"Bebas Neue", sans-serif',
-            fontSize: "clamp(58px, 10.5vw, 116px)",
+            fontSize: "clamp(54px, 12vw, 116px)",
             lineHeight: 0.88,
             color: "var(--navy)",
             letterSpacing: "0.02em",
-            marginBottom: 10,
+            marginBottom: 16,
             maxWidth: 760,
           }}
         >
@@ -159,19 +155,26 @@ export default function Hero() {
           style={{
             fontFamily: '"Cormorant Garamond", serif',
             fontStyle: "italic",
-            fontSize: 19,
+            fontSize: "clamp(17px, 4vw, 20px)",
             color: "var(--cream)",
             opacity: 0.9,
             maxWidth: 480,
-            lineHeight: 1.55,
-            marginBottom: 44,
+            lineHeight: 1.5,
+            marginBottom: 40,
           }}
         >
           Where ancient Silk Road heritage meets the world's most dramatic mountain corridors. Experience luxury at the
           roof of the world.
         </div>
 
-        <div style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: 12,
+            flexWrap: "wrap",
+            flexDirection: "row",
+          }}
+        >
           <Link
             href="/packages"
             className="clip-path-btn-lg"
@@ -184,6 +187,9 @@ export default function Hero() {
               letterSpacing: "0.16em",
               padding: "13px 34px",
               textDecoration: "none",
+              flex: "0 1 auto",
+              textAlign: "center",
+              minWidth: 180,
             }}
           >
             REQUEST ITINERARY
@@ -192,21 +198,26 @@ export default function Hero() {
             href="/gallery"
             className="btn-ghost"
             style={{
-              background: "transparent",
-              color: "var(--cream)",
-              border: "1px solid rgba(255,255,255,0.25)",
+              background: "rgba(255,255,255,0.2)",
+              backdropFilter: "blur(4px)",
+              color: "var(--navy)",
+              border: "1px solid var(--amber-border)",
               fontFamily: '"Rajdhani", sans-serif',
               fontWeight: 600,
               fontSize: 13,
               letterSpacing: "0.16em",
               padding: "13px 34px",
               textDecoration: "none",
+              flex: "0 1 auto",
+              textAlign: "center",
+              minWidth: 180,
             }}
           >
             VIEW GALLERY
           </Link>
         </div>
       </div>
+
 
       <div
         style={{

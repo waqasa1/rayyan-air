@@ -16,8 +16,9 @@ export default function MissionSection() {
     ],
   ];
   return (
-    <section style={{ padding: "100px 44px", background: "var(--bg)" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "420px 1fr", gap: 80, alignItems: "center" }}>
+    <section style={{ padding: "80px 20px", background: "var(--bg)" }}>
+      <div className="mission-grid" style={{ maxWidth: 1200, margin: "0 auto" }}>
+
         {/* Officer card */}
         <div style={{ position: "relative" }}>
           <div
@@ -58,7 +59,7 @@ export default function MissionSection() {
             <div
               style={{
                 width: "100%",
-                height: 320,
+                height: 450,
                 marginBottom: 20,
                 background: "linear-gradient(145deg, #162540 0%, #0d1e35 100%)",
                 border: "2px solid var(--amber-border)",
@@ -67,7 +68,7 @@ export default function MissionSection() {
               }}
             >
               <Image
-                src="/images/pilot_and_ceo.jpeg"
+                src="/images/pilot_and_ceo.png"
                 alt="Captain F.S. Bhatti"
                 fill
                 sizes="(max-width: 768px) 100vw, 420px"
@@ -185,12 +186,13 @@ export default function MissionSection() {
           <h2
             style={{
               fontFamily: '"Bebas Neue", sans-serif',
-              fontSize: 64,
+              fontSize: "clamp(48px, 8vw, 76px)",
               color: "var(--navy)",
               lineHeight: 0.9,
               marginBottom: 36,
             }}
           >
+
             OUR
             <br />
             MISSION

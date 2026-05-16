@@ -21,7 +21,7 @@ export default function WhyRayyan() {
   return (
     <section
       style={{
-        padding: "100px 44px",
+        padding: "80px 20px",
         position: "relative",
         overflow: "hidden",
         background: `radial-gradient(ellipse at center top, rgba(26, 92, 56, 0.18) 0%, transparent 55%), var(--bg-card)`,
@@ -40,7 +40,7 @@ export default function WhyRayyan() {
             WHY RAYYAN AIR?
           </h2>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28 }}>
+        <div className="grid-3-stack">
           {reasons.map(([title, color, desc]) => (
             <div
               key={title}
@@ -77,5 +77,6 @@ export default function WhyRayyan() {
         </div>
       </div>
     </section>
+
   );
 }

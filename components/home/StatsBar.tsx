@@ -6,15 +6,15 @@ export default function StatsBar() {
     ["100%", "SAFETY RECORD"],
   ];
   return (
-    <div style={{ background: "var(--amber)", padding: "18px 44px" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}>
+    <div style={{ background: "var(--amber)", padding: "24px 20px" }}>
+      <div className="stats-grid" style={{ maxWidth: 1200, margin: "0 auto" }}>
         {stats.map(([n, l], i) => (
           <div
             key={i}
+            className="stats-item"
             style={{
               textAlign: "center",
-              borderRight: i < 3 ? "1px solid rgba(255,255,255,0.28)" : "none",
-              padding: "6px 0",
+              padding: "10px 0",
             }}
           >
             <div
@@ -23,6 +23,7 @@ export default function StatsBar() {
                 fontSize: 38,
                 color: "#fff",
                 letterSpacing: "0.04em",
+                lineHeight: 1,
               }}
             >
               {n}
@@ -30,10 +31,11 @@ export default function StatsBar() {
             <div
               style={{
                 fontFamily: '"Rajdhani", sans-serif',
-                fontSize: 11,
-                color: "rgba(255,255,255,0.78)",
+                fontSize: 10,
+                color: "rgba(255,255,255,0.85)",
                 letterSpacing: "0.18em",
                 fontWeight: 700,
+                marginTop: 4,
               }}
             >
               {l}
@@ -42,5 +44,7 @@ export default function StatsBar() {
         ))}
       </div>
     </div>
+
+
   );
 }
