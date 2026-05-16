@@ -29,7 +29,7 @@ export default function TourTeaser() {
             style={{
               fontFamily: '"Bebas Neue", sans-serif',
               fontSize: "clamp(44px, 6vw, 76px)",
-              color: "#fff",
+              color: "var(--navy)",
             }}
           >
             THE 8-DAY ODYSSEY
@@ -39,7 +39,7 @@ export default function TourTeaser() {
               fontFamily: '"Cormorant Garamond", serif',
               fontStyle: "italic",
               fontSize: 18,
-              color: "rgba(255, 255, 255, 0.45)",
+              color: "var(--muted)",
               marginTop: 8,
             }}
           >
@@ -165,10 +165,11 @@ export default function TourTeaser() {
               <div
                 key={label}
                 style={{
-                  background: "var(--amber-dim)",
-                  border: "1px solid var(--amber-border)",
+                  background: "rgba(255, 255, 255, 0.05)",
+                  border: "1px solid rgba(232, 130, 26, 0.3)",
                   padding: "12px 14px",
                   textAlign: "center",
+                  color: "#fff",
                 }}
               >
                 <div style={{ fontSize: 18, marginBottom: 4 }}>{icon}</div>
