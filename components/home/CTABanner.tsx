@@ -20,7 +20,7 @@ export default function CTABanner() {
           style={{
             fontFamily: '"Bebas Neue", sans-serif',
             fontSize: "clamp(36px, 5vw, 64px)",
-            color: "#fff",
+            color: "var(--navy)",
             marginBottom: 12,
           }}
         >
@@ -30,7 +30,7 @@ export default function CTABanner() {
           style={{
             fontFamily: '"Rajdhani", sans-serif',
             fontSize: 16,
-            color: "rgba(255, 255, 255, 0.85)",
+            color: "var(--muted)",
             marginBottom: 32,
           }}
         >

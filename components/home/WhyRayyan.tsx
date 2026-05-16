@@ -34,7 +34,7 @@ export default function WhyRayyan() {
             style={{
               fontFamily: '"Bebas Neue", sans-serif',
               fontSize: "clamp(44px, 7vw, 82px)",
-              color: "#fff",
+              color: "var(--navy)",
             }}
           >
             WHY RAYYAN AIR?
@@ -66,7 +66,7 @@ export default function WhyRayyan() {
                 style={{
                   fontFamily: '"Rajdhani", sans-serif',
                   fontSize: 15,
-                  color: "rgba(255, 255, 255, 0.58)",
+                  color: "var(--muted)",
                   lineHeight: 1.75,
                 }}
               >

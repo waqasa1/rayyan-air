@@ -32,7 +32,7 @@ export default function Facilities() {
               style={{
                 fontFamily: '"Bebas Neue", sans-serif',
                 fontSize: 64,
-                color: "#fff",
+                color: "var(--navy)",
                 lineHeight: 0.95,
               }}
             >
@@ -46,7 +46,7 @@ export default function Facilities() {
               fontFamily: '"Cormorant Garamond", serif',
               fontStyle: "italic",
               fontSize: 17,
-              color: "rgba(255, 255, 255, 0.45)",
+              color: "var(--muted)",
               maxWidth: 300,
               lineHeight: 1.65,
             }}
@@ -76,7 +76,7 @@ export default function Facilities() {
                 style={{
                   fontFamily: '"Rajdhani", sans-serif',
                   fontSize: 13,
-                  color: "#fff",
+                  color: "var(--navy)",
                   fontWeight: 700,
                   letterSpacing: "0.1em",
                   marginBottom: 12,
@@ -88,8 +88,8 @@ export default function Facilities() {
                 style={{
                   fontFamily: '"Rajdhani", sans-serif',
                   fontSize: 14,
-                  color: "rgba(255, 255, 255, 0.5)",
-                  lineHeight: 1.65,
+                  color: "var(--muted)",
+                  lineHeight: 1.5,
                 }}
               >
                 {desc}

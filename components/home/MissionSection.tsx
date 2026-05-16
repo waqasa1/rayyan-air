@@ -58,7 +58,7 @@ export default function MissionSection() {
             <div
               style={{
                 width: "100%",
-                height: 250,
+                height: 320,
                 marginBottom: 20,
                 background: "linear-gradient(145deg, #162540 0%, #0d1e35 100%)",
                 border: "2px solid var(--amber-border)",
@@ -71,7 +71,7 @@ export default function MissionSection() {
                 alt="Captain F.S. Bhatti"
                 fill
                 sizes="(max-width: 768px) 100vw, 420px"
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "cover", objectPosition: "top" }}
               />
               <div
                 style={{
@@ -134,7 +134,7 @@ export default function MissionSection() {
                 fontFamily: '"Cormorant Garamond", serif',
                 fontStyle: "italic",
                 fontSize: 15,
-                color: "rgba(255, 255, 255, 0.55)",
+                color: "var(--muted)",
                 lineHeight: 1.65,
               }}
             >
@@ -186,7 +186,7 @@ export default function MissionSection() {
             style={{
               fontFamily: '"Bebas Neue", sans-serif',
               fontSize: 64,
-              color: "#fff",
+              color: "var(--navy)",
               lineHeight: 0.9,
               marginBottom: 36,
             }}
@@ -231,9 +231,9 @@ export default function MissionSection() {
                 <div
                   style={{
                     fontFamily: '"Rajdhani", sans-serif',
-                    fontSize: 15,
-                    color: "rgba(255, 255, 255, 0.6)",
-                    lineHeight: 1.6,
+                    fontSize: 14,
+                    color: "var(--muted)",
+                    lineHeight: 1.5,
                   }}
                 >
                   {d}

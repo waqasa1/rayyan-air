@@ -37,7 +37,7 @@ export default function GalleryPage() {
         >
           ◆ DESTINATION ARCHIVE
         </div>
-        <h1 style={{ fontFamily: '"Bebas Neue", sans-serif', fontSize: 68, color: "#fff", marginBottom: 24 }}>GALLERY</h1>
+        <h1 style={{ fontFamily: '"Bebas Neue", sans-serif', fontSize: 68, color: "var(--navy)", marginBottom: 24 }}>GALLERY</h1>
         <div style={{ display: "flex", gap: 8 }}>
           {["ALL", "PAKISTAN", "CHINA", "HERITAGE"].map((f) => (
             <button

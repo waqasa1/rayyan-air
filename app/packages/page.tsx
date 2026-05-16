@@ -89,7 +89,7 @@ export default function PackagesPage() {
       {/* Hero */}
       <div
         style={{
-          background: `radial-gradient(ellipse at 60% 50%, rgba(20, 50, 120, 0.3) 0%, transparent 60%), linear-gradient(180deg, var(--bg) 0%, #0A1A30 100%)`,
+          background: `radial-gradient(ellipse at 60% 50%, rgba(20, 50, 120, 0.05) 0%, transparent 60%), linear-gradient(180deg, var(--bg) 0%, #F3F4F6 100%)`,
           padding: "90px 44px 60px",
           position: "relative",
           overflow: "hidden",
@@ -114,7 +114,7 @@ export default function PackagesPage() {
             style={{
               fontFamily: '"Bebas Neue", sans-serif',
               fontSize: "clamp(50px, 8vw, 96px)",
-              color: "#fff",
+              color: "var(--navy)",
               lineHeight: 0.88,
               marginBottom: 22,
             }}
@@ -154,7 +154,7 @@ export default function PackagesPage() {
           >
             ◆ DETAILED ITINERARY
           </div>
-          <h2 style={{ fontFamily: '"Bebas Neue", sans-serif', fontSize: 52, color: "#fff", marginBottom: 36 }}>
+          <h2 style={{ fontFamily: '"Bebas Neue", sans-serif', fontSize: 52, color: "var(--navy)", marginBottom: 36 }}>
             MISSION BRIEFING
           </h2>
           {itin.map((item, i) => (
@@ -189,7 +189,7 @@ export default function PackagesPage() {
                     style={{
                       fontFamily: '"Rajdhani", sans-serif',
                       fontSize: 17,
-                      color: "#fff",
+                      color: "var(--navy)",
                       fontWeight: 600,
                       marginBottom: 3,
                     }}
@@ -242,7 +242,7 @@ export default function PackagesPage() {
                         style={{
                           fontFamily: '"Rajdhani", sans-serif',
                           fontSize: 14,
-                          color: "rgba(255, 255, 255, 0.65)",
+                          color: "var(--navy)",
                           lineHeight: 1.55,
                         }}
                       >
@@ -292,7 +292,7 @@ export default function PackagesPage() {
                 }}
               >
                 <div style={{ color: "#4CAF50", fontSize: 15, fontWeight: 700 }}>✓</div>
-                <div style={{ fontFamily: '"Rajdhani", sans-serif', fontSize: 14, color: "rgba(255, 255, 255, 0.65)" }}>
+                <div style={{ fontFamily: '"Rajdhani", sans-serif', fontSize: 14, color: "var(--navy)" }}>
                   {f}
                 </div>
               </div>

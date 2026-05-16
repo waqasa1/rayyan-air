@@ -63,7 +63,7 @@ export default function BookingForm() {
               style={{
                 fontFamily: '"Rajdhani", sans-serif',
                 fontSize: 14,
-                color: "rgba(255, 255, 255, 0.6)",
+                color: "var(--muted)",
                 lineHeight: 1.65,
               }}
             >
@@ -100,9 +100,9 @@ export default function BookingForm() {
                   onChange={(e) => setForm({ ...form, [field]: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "var(--navy)",
+                    background: "#fff",
                     border: "1px solid var(--amber-border)",
-                    color: "#fff",
+                    color: "var(--navy)",
                     padding: "9px 13px",
                     fontFamily: '"Rajdhani", sans-serif',
                     fontSize: 14,
@@ -130,9 +130,9 @@ export default function BookingForm() {
                   onChange={(e) => setForm({ ...form, date: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "var(--navy)",
+                    background: "#fff",
                     border: "1px solid var(--amber-border)",
-                    color: "#fff",
+                    color: "var(--navy)",
                     padding: "9px 13px",
                     fontFamily: '"Rajdhani", sans-serif',
                     fontSize: 13,
@@ -157,9 +157,9 @@ export default function BookingForm() {
                   onChange={(e) => setForm({ ...form, pax: e.target.value })}
                   style={{
                     width: "100%",
-                    background: "var(--navy)",
+                    background: "#fff",
                     border: "1px solid var(--amber-border)",
-                    color: "#fff",
+                    color: "var(--navy)",
                     padding: "9px 13px",
                     fontFamily: '"Rajdhani", sans-serif',
                     fontSize: 13,
@@ -193,9 +193,9 @@ export default function BookingForm() {
                 onChange={(e) => setForm({ ...form, notes: e.target.value })}
                 style={{
                   width: "100%",
-                  background: "var(--navy)",
+                  background: "#fff",
                   border: "1px solid var(--amber-border)",
-                  color: "#fff",
+                  color: "var(--navy)",
                   padding: "9px 13px",
                   fontFamily: '"Rajdhani", sans-serif',
                   fontSize: 14,

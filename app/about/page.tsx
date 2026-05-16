@@ -31,7 +31,7 @@ export default function AboutPage() {
             style={{
               fontFamily: '"Bebas Neue", sans-serif',
               fontSize: "clamp(52px, 9vw, 90px)",
-              color: "#fff",
+              color: "var(--navy)",
               marginBottom: 50,
             }}
           >
@@ -56,7 +56,7 @@ export default function AboutPage() {
                 style={{
                   fontFamily: '"Rajdhani", sans-serif',
                   fontSize: 15,
-                  color: "rgba(255, 255, 255, 0.55)",
+                  color: "var(--muted)",
                   lineHeight: 1.8,
                   marginBottom: 24,
                 }}
@@ -69,7 +69,7 @@ export default function AboutPage() {
                 style={{
                   fontFamily: '"Rajdhani", sans-serif',
                   fontSize: 15,
-                  color: "rgba(255, 255, 255, 0.55)",
+                  color: "var(--muted)",
                   lineHeight: 1.8,
                 }}
               >
@@ -104,7 +104,7 @@ export default function AboutPage() {
                     style={{
                       fontFamily: '"Rajdhani", sans-serif',
                       fontSize: 15,
-                      color: "rgba(255, 255, 255, 0.6)",
+                      color: "var(--navy)",
                       lineHeight: 1.8,
                       whiteSpace: "pre-line",
                     }}
@@ -146,7 +146,7 @@ export default function AboutPage() {
                       style={{
                         fontFamily: '"Rajdhani", sans-serif',
                         fontSize: 14,
-                        color: "rgba(255, 255, 255, 0.65)",
+                        color: "var(--muted)",
                       }}
                     >
                       {c}

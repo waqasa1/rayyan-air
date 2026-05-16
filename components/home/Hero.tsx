@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import GridBg from "../GridBg";
 import Crosshair from "../Crosshair";
@@ -19,12 +20,31 @@ export default function Hero() {
         display: "flex",
         alignItems: "center",
         overflow: "hidden",
-        background: `radial-gradient(ellipse at 65% 45%, rgba(20,50,120,0.28) 0%, transparent 55%),
-          radial-gradient(ellipse at 15% 65%, rgba(26,92,56,0.18) 0%, transparent 50%),
-          linear-gradient(180deg, var(--bg) 0%, #0A1A30 60%, var(--bg) 100%)`,
+        background: "var(--bg)",
       }}
     >
-      <GridBg />
+      {/* Background Plane Image */}
+      <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+        <Image
+          src="/images/plane_karakoram.png"
+          alt="Rayyan Air Private Jet over Karakoram"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover", objectPosition: "center" }}
+        />
+        {/* Gradient Overlays for readability */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: `linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%),
+                         linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, transparent 40%)`,
+          }}
+        />
+      </div>
+
+      <GridBg opacity={0.12} />
       <Crosshair top={80} right={60} />
       {/* Diagonal accent line */}
       <div
@@ -46,9 +66,9 @@ export default function Hero() {
           right: 44,
           fontFamily: '"Rajdhani", sans-serif',
           fontSize: 11,
-          color: "var(--amber)",
+          color: "var(--navy)",
           letterSpacing: "0.14em",
-          opacity: 0.55,
+          opacity: 0.7,
           lineHeight: 1.8,
         }}
       >
@@ -93,6 +113,7 @@ export default function Hero() {
             border: "1px solid var(--amber-border)",
             padding: "5px 16px",
             marginBottom: 28,
+            background: "rgba(255,255,255,0.6)",
           }}
         >
           <div
@@ -122,7 +143,7 @@ export default function Hero() {
             fontFamily: '"Bebas Neue", sans-serif',
             fontSize: "clamp(58px, 10.5vw, 116px)",
             lineHeight: 0.88,
-            color: "#fff",
+            color: "var(--navy)",
             letterSpacing: "0.02em",
             marginBottom: 10,
             maxWidth: 760,
@@ -140,7 +161,7 @@ export default function Hero() {
             fontStyle: "italic",
             fontSize: 19,
             color: "var(--cream)",
-            opacity: 0.75,
+            opacity: 0.9,
             maxWidth: 480,
             lineHeight: 1.55,
             marginBottom: 44,
