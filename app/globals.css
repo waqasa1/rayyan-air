@@ -1,26 +1,169 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Rajdhani:wght@400;500;600;700&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #060E1C;
+  --bg-card: #0C1929;
+  --bg-hover: #112235;
+  --navy: #081525;
+  --amber: #E8821A;
+  --amber-dim: rgba(232, 130, 26, 0.12);
+  --amber-border: rgba(232, 130, 26, 0.25);
+  --gold: #C9A84C;
+  --green: #1A5C38;
+  --green-dim: rgba(26, 92, 56, 0.15);
+  --cream: #EDE8DC;
+  --muted: #5D7A9A;
+  --border-faint: rgba(255, 255, 255, 0.06);
+  --white: #FFFFFF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html,
+body {
+  background: var(--bg);
+  color: #fff;
+  scroll-behavior: smooth;
+  font-family: "Rajdhani", sans-serif;
+  overflow-x: hidden;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+  font-family: "Rajdhani", sans-serif;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--amber);
+  border-radius: 3px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sweep {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.navlink {
+  transition: color 0.2s;
+  position: relative;
+}
+
+.navlink:hover {
+  color: var(--amber) !important;
+}
+
+.btn-ghost {
+  transition: all 0.25s;
+}
+
+.btn-ghost:hover {
+  border-color: var(--amber) !important;
+  color: var(--amber) !important;
+}
+
+.daycard {
+  transition: all 0.3s ease;
+}
+
+.daycard:hover {
+  border-color: var(--amber) !important;
+  background: var(--bg-hover) !important;
+}
+
+.galcard {
+  transition: transform 0.3s ease;
+}
+
+.galcard:hover {
+  transform: scale(1.03) !important;
+}
+
+.galcard:hover .galoverlay {
+  opacity: 1 !important;
+}
+
+.footlink {
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.footlink:hover {
+  color: var(--amber) !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.clip-path-btn {
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+}
+
+.clip-path-btn-lg {
+  clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+}
+
+.clip-path-card {
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+}
+
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(var(--amber) 1px, transparent 1px), linear-gradient(90deg, var(--amber) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.035;
 }
